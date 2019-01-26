@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous" />
+	<!-- home page css -->
+	<link rel="stylesheet" href="styles/index.css" />
+	<!-- fonts -->
+	<link rel="stylesheet" href="https://use.typekit.net/fcf7nql.css">
+	<title>Elizabeth Cauffiel</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<!-- first section -->
+		<div class="row">
+			<div class="homeSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h1>Elizabeth Cauffiel</h1>
+			</div>
+		</div>
+		<!-- end of first section -->
+		<!-- second section -->
+		<div class="row">
+			<div class="aboutSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h1>About</h1>
+			</div>
+		</div>
+		<!-- end of second section -->
+		<!-- nav section -->
+		<div class="navSection">
+			<!-- nav button -->
+			<button id="menuButton">
+				<div class="menuLine"></div>
+				<div class="menuLine"></div>
+				<div class="menuLine"></div>
+				<h2 style="display: table-cell;">Menu</h2>
+			</button>
+			<!-- nav -->
+			<ul class="nav flex-column ">
+				<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+				<!-- add database maybe (if projects in database add in nav bar this section) -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+					 aria-expanded="false">Projects</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Senior Project</a>
+						<a class="dropdown-item" href="#">Disabilities Project</a>
+						<a class="dropdown-item" href="#">Portfolio Project</a>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end of nav -->
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+	 crossorigin="anonymous"></script>
+	<script>
+		// default hide
+		$(document).ready(function () {
+			$('.nav').hide()
+
+
+			// $('#menuButton').click(function () {
+			// 	$('.nav').toggle()
+			// })
+		})
+		// animate menu
+		$("#menuButton").click(function () {
+			$(".nav").toggle("slide", { direction: "right" }, 500);
+		});
+
+		// $('#menuButton').click(function () {
+		// 	$('.nav').animate(
+		// 		{
+		// 			width: ['100%', 'swing']
+		// 		},
+		// 		500,
+		// 		'linear'
+		// 	)
+		// })
+		// if ($('.nav').width() == '100%') {
+		// 	console.log('hi');
+		// 	$('#menuButton').click(function () {
+		// 		$('.nav').fadeToggle(
+		// 			{
+		// 				width: ['0%', 'swing']
+		// 			},
+		// 			500,
+		// 			'linear'
+		// 		)
+		// 	})
+		// }
+	</script>
+</body>
+
+</html>
