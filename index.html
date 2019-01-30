@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+	<script src="bower_components/aos/dist/aos.js"></script>
+
+
 	<!-- Required meta tags -->
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -18,48 +24,76 @@
 
 <body>
 	<div class="container-fluid">
+		<div class="overflow-hidden">
+			<div class="overflow-visible">
 
-		<!-- first section -->
-		<div class="row">
-			<div class="homeSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<h1>Elizabeth Cauffiel</h1>
-			</div>
-		</div>
-		<!-- end of first section -->
-		<!-- second section -->
-		<div class="row">
-			<div class="aboutSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<h1>About</h1>
-			</div>
-		</div>
-		<!-- end of second section -->
-		<!-- nav section -->
-		<div class="navSection">
-			<!-- nav button -->
-			<button id="menuButton">
-				<div class="menuLine"></div>
-				<div class="menuLine"></div>
-				<div class="menuLine"></div>
-				<h2 style="display: table-cell;">Menu</h2>
-			</button>
-			<!-- nav -->
-			<ul class="nav flex-column ">
-				<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-				<!-- add database maybe (if projects in database add in nav bar this section) -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-					 aria-expanded="false">Projects</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Senior Project</a>
-						<a class="dropdown-item" href="#">Disabilities Project</a>
-						<a class="dropdown-item" href="#">Portfolio Project</a>
+				<!-- first section -->
+				<div class="row">
+					<div class="homeSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<h1 id="homeTitle">Elizabeth Cauffiel</h1>
 					</div>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-			</ul>
+				</div>
+				<!-- end of first section -->
+				<!-- second section -->
+				<div class="row">
+					<div class="aboutSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div class="col col-sm-5 col-md-5 col-lg-5 col-xl-5" style="text-align: -webkit-right;" data-aos="fade-right"
+						 data-aos-offset="120" data-aos-easing="ease-in-sine" data-aos-duration="500">
+							<div class="aboutTitleBox">
+								<h1 id="aboutTitle">About</h1>
+							</div>
+						</div>
+						<div class="col col-sm-7 col-md-7 col-lg-7 col-xl-7" style="padding-top: 2.5%; margin-left: 5%;">
+							<div class="aboutParagraph" data-aos="fade-left" data-aos-offset="120" data-aos-easing="ease-in-sine"
+							 data-aos-duration="500">
+								<p id="aboutParagraph">
+									I am currently a senior at Purdue University working towards a Bachelor’s degree in Computer Graphics
+									Technology
+									with a focus in Web Development and Design. I am also minoring in Film and Video studies. My interests are
+									graphics, web design and user experience.</p>
+							</div>
+							<div class="aboutParagraph" data-aos="fade-up-left" data-aos-offset="120" data-aos-easing="ease-in-sine"
+							 data-aos-duration="700">
+								<h3 id="skillsTitle">Skills</h3>
+								<p id="skillsParagraph">
+									Web Design<br />
+									Front-End Dev<br />
+									Graphic Designer</p>
+							</div>
+							<br />
+						</div>
+					</div>
+				</div>
+				<!-- end of second section -->
+				<!-- nav section -->
+				<div class="navSection">
+					<!-- nav button -->
+					<button id="menuButton">
+						<div class="menuLine"></div>
+						<div class="menuLine"></div>
+						<div class="menuLine"></div>
+						<h2 style="display: table-cell;">Menu</h2>
+					</button>
+					<!-- nav -->
+					<ul class="nav flex-column ">
+						<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+						<!-- add database maybe (if projects in database add in nav bar this section) -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+							 aria-expanded="false">Projects</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Senior Project</a>
+								<a class="dropdown-item" href="#">Disabilities Project</a>
+								<a class="dropdown-item" href="#">Portfolio Project</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+					</ul>
+				</div>
+				<!-- end of nav -->
+			</div>
 		</div>
-		<!-- end of nav -->
 	</div>
 
 	<!-- Optional JavaScript -->
@@ -76,7 +110,7 @@
 	<script>
 		// default hide
 		$(document).ready(function () {
-			$('.nav').hide()
+			$('.nav').hide();
 
 
 			// $('#menuButton').click(function () {
@@ -110,6 +144,12 @@
 		// 	})
 		// }
 	</script>
+	<!--  -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
 </body>
 
 </html>
