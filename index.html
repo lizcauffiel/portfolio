@@ -27,14 +27,14 @@
 		<div class="overflow-hidden">
 			<div class="overflow-visible">
 
-				<!-- first section -->
+				<!-- first section (home)-->
 				<div class="row">
 					<div class="homeSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
 						<h1 id="homeTitle">Elizabeth Cauffiel</h1>
 					</div>
 				</div>
 				<!-- end of first section -->
-				<!-- second section -->
+				<!-- second section (about) -->
 				<div class="row">
 					<div class="aboutSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
 						<div class="col col-sm-5 col-md-5 col-lg-5 col-xl-5" style="text-align: -webkit-right;" data-aos="fade-right"
@@ -65,31 +65,64 @@
 					</div>
 				</div>
 				<!-- end of second section -->
+				<!-- third section (project) -->
+				<div class="row">
+					<div class="projectSection col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div class="row">
+							<div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<h1 id="projectTitle">Projects</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class=" col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<div class="card-deck">
+									<div class="card">
+										<img class="card-img-top" src="..." alt="Card image cap">
+									</div>
+									<div class="card">
+										<img class="card-img-top" src="..." alt="Card image cap">
+									</div>
+									<div class="card">
+										<img class="card-img-top" src="..." alt="Card image cap">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+				</div>
+				<!-- end of third section -->
 				<!-- nav section -->
 				<div class="navSection">
 					<!-- nav button -->
 					<button id="menuButton">
-						<div class="menuLine"></div>
-						<div class="menuLine"></div>
-						<div class="menuLine"></div>
-						<h2 style="display: table-cell;">Menu</h2>
+						<h2 onclick="openNav()" style="display: table-cell;">&#9776 Menu</h2>
 					</button>
 					<!-- nav -->
-					<ul class="nav flex-column ">
-						<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-						<!-- add database maybe (if projects in database add in nav bar this section) -->
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-							 aria-expanded="false">Projects</a>
-							<div class="dropdown-menu">
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+							<a class="nav-link  " href="#">Home</a>
+							<a class="nav-link" href="#">About</a>
+							<!-- add database maybe (if projects in database add in nav bar this section) -->
+							<button class="accordion">
+								<a class="nav-link " href="#">Projects</a></button>
+							<div class="panel">
 								<a class="dropdown-item" href="#">Senior Project</a>
 								<a class="dropdown-item" href="#">Disabilities Project</a>
 								<a class="dropdown-item" href="#">Portfolio Project</a>
 							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-					</ul>
+							<a class="nav-link" href="#">Contact</a>
+
+						</div>
+					</div>
 				</div>
 				<!-- end of nav -->
 			</div>
@@ -118,31 +151,45 @@
 			// })
 		})
 		// animate menu
-		$("#menuButton").click(function () {
-			$(".nav").toggle("slide", { direction: "right" }, 500);
-		});
+		// $("#menuButton").click(function () {
+		// 	$(".nav").toggle("slide", { direction: "right" }, 500);
+		// });
 
-		// $('#menuButton').click(function () {
-		// 	$('.nav').animate(
-		// 		{
-		// 			width: ['100%', 'swing']
-		// 		},
-		// 		500,
-		// 		'linear'
-		// 	)
-		// })
-		// if ($('.nav').width() == '100%') {
-		// 	console.log('hi');
-		// 	$('#menuButton').click(function () {
-		// 		$('.nav').fadeToggle(
-		// 			{
-		// 				width: ['0%', 'swing']
-		// 			},
-		// 			500,
-		// 			'linear'
-		// 		)
-		// 	})
-		// }
+		function openNav() {
+			document.getElementById("myNav").style.width = "25%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+
+
+
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("mouseenter", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			}
+			);
+			acc[i].addEventListener("mouseleave", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				}
+			}
+			);
+		}
+
+
 	</script>
 	<!--  -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
